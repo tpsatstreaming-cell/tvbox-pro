@@ -9,133 +9,75 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: linear-gradient(180deg, #000, #0a0a0a);
+    background: #000;
     color: white;
 }
 
 /* TOPO */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 40px;
-    background: black;
+    padding: 20px;
+    text-align: center;
     border-bottom: 1px solid #222;
 }
 
-.logo {
+header h1 {
     color: red;
-    font-size: 24px;
-    font-weight: bold;
-}
-
-nav a {
-    color: white;
-    margin-left: 20px;
-    text-decoration: none;
 }
 
 /* BANNER */
 .banner {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+    text-align: center;
     padding: 60px 20px;
 }
 
-.banner-text h1 {
-    font-size: 42px;
+.banner h1 {
+    font-size: 38px;
 }
 
-.banner-text span {
+.banner span {
     color: red;
 }
 
-.botao {
-    background: linear-gradient(90deg, #ff0000, #cc0000);
-    padding: 15px 25px;
-    border-radius: 30px;
-    color: white;
-    text-decoration: none;
+/* BOTÃO GRANDE */
+.botao-grande {
+    background: linear-gradient(90deg, #ff1a1a, #cc0000);
+    padding: 25px 40px;
+    border-radius: 20px;
     display: inline-flex;
     align-items: center;
-    margin-top: 20px;
-    font-weight: bold;
+    text-decoration: none;
+    margin-top: 40px;
+    box-shadow: 0 0 25px rgba(255,0,0,0.5);
     transition: 0.3s;
 }
 
-.botao:hover {
+.botao-grande:hover {
     transform: scale(1.05);
 }
 
-.botao img {
-    width: 12px;
-    margin-right: 8px;
+.botao-grande img {
+    width: 70px;
+    margin-right: 20px;
+}
+
+.botao-grande span {
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* SEÇÕES */
 .section {
-    padding: 50px 20px;
+    padding: 40px;
     text-align: center;
 }
 
-.cards, .planos, .depoimentos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* CARDS */
 .card {
     background: #111;
-    margin: 10px;
-    padding: 25px;
-    border-radius: 12px;
-    width: 250px;
-    transition: 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-/* PLANOS */
-.plano {
-    background: #111;
-    margin: 15px;
-    padding: 25px;
-    border-radius: 12px;
-    width: 260px;
-    border: 1px solid #222;
-    transition: 0.3s;
-}
-
-.plano:hover {
-    transform: scale(1.05);
-}
-
-.plano h3 {
-    color: red;
-}
-
-.plano p {
-    font-size: 26px;
-}
-
-/* DEPOIMENTOS */
-.depoimento {
-    background: #111;
-    margin: 10px;
+    margin: 10px auto;
     padding: 20px;
     border-radius: 10px;
-    width: 220px;
-    font-size: 14px;
-}
-
-/* IMAGEM */
-.banner img {
-    width: 420px;
-    border-radius: 10px;
+    max-width: 300px;
 }
 
 /* WHATSAPP FIXO */
@@ -146,14 +88,7 @@ nav a {
 }
 
 .whatsapp img {
-    width: 70px;
-}
-
-/* RODAPÉ */
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #aaa;
+    width: 60px;
 }
 </style>
 
@@ -162,69 +97,35 @@ footer {
 <body>
 
 <header>
-    <div class="logo">TVBox Pró</div>
-    <nav>
-        <a href="#">INÍCIO</a>
-        <a href="#">PLANOS</a>
-        <a href="#">CONTATO</a>
-    </nav>
+    <h1>TVBox Pró</h1>
 </header>
 
 <div class="banner">
-    <div class="banner-text">
-        <h1>Transforme sua TV em uma <span>central completa!</span></h1>
-        <p>Atendimento imediato | Instalação rápida | Suporte garantido</p>
+    <h1>Transforme sua TV em uma <span>central completa</span></h1>
+    <p>Atendimento imediato | Instalação rápida | Suporte garantido</p>
 
-        <a class="botao" href="https://wa.me/5535999003481">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
-            FALAR NO WHATSAPP
-        </a>
-    </div>
-
-    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
+    <!-- BOTÃO GRANDE -->
+    <a class="botao-grande" href="https://wa.me/5535999003481">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+        <span>FALAR NO WHATSAPP</span>
+    </a>
 </div>
 
 <div class="section">
     <h2>O QUE VOCÊ RECEBE</h2>
-    <div class="cards">
-        <div class="card">⚙️ Instalação completa</div>
-        <div class="card">📺 Configuração de aplicativos</div>
-        <div class="card">🎧 Suporte rápido</div>
-    </div>
-</div>
-
-<div class="section">
-    <h2>NOSSOS PLANOS</h2>
-    <div class="planos">
-        <div class="plano">
-            <h3>PLANO BÁSICO</h3>
-            <p>R$ 50</p>
-            <a class="botao" href="https://wa.me/5535999003481">Contratar</a>
-        </div>
-
-        <div class="plano">
-            <h3>PLANO COMPLETO</h3>
-            <p>R$ 100</p>
-            <a class="botao" href="https://wa.me/5535999003481">Contratar</a>
-        </div>
-    </div>
+    <div class="card">Instalação completa</div>
+    <div class="card">Configuração de aplicativos</div>
+    <div class="card">Suporte rápido</div>
 </div>
 
 <div class="section">
     <h2>CLIENTES SATISFEITOS</h2>
-    <div class="depoimentos">
-        <div class="depoimento">⭐⭐⭐⭐⭐ Muito rápido e profissional!</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Funcionou perfeito!</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Atendimento excelente!</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Recomendo demais!</div>
-    </div>
+    <div class="card">⭐⭐⭐⭐⭐ Atendimento rápido e perfeito!</div>
+    <div class="card">⭐⭐⭐⭐⭐ Funcionou tudo!</div>
+    <div class="card">⭐⭐⭐⭐⭐ Recomendo demais</div>
 </div>
 
-<footer>
-    TVBox Pró - Atendimento rápido via WhatsApp
-</footer>
-
-<!-- BOTÃO WHATSAPP -->
+<!-- BOTÃO FIXO -->
 <a class="whatsapp" href="https://wa.me/5535999003481">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
 </a>
