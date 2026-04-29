@@ -9,7 +9,7 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: #000;
+    background: linear-gradient(180deg, #000, #0a0a0a);
     color: white;
 }
 
@@ -33,7 +33,6 @@ nav a {
     color: white;
     margin-left: 20px;
     text-decoration: none;
-    font-size: 14px;
 }
 
 /* BANNER */
@@ -45,7 +44,7 @@ nav a {
 }
 
 .banner-text h1 {
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .banner-text span {
@@ -53,7 +52,7 @@ nav a {
 }
 
 .botao {
-    background: red;
+    background: linear-gradient(90deg, #ff0000, #cc0000);
     padding: 15px 25px;
     border-radius: 30px;
     color: white;
@@ -62,6 +61,11 @@ nav a {
     align-items: center;
     margin-top: 20px;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    transform: scale(1.05);
 }
 
 .botao img {
@@ -85,9 +89,14 @@ nav a {
 .card {
     background: #111;
     margin: 10px;
-    padding: 20px;
-    border-radius: 10px;
+    padding: 25px;
+    border-radius: 12px;
     width: 250px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 /* PLANOS */
@@ -95,9 +104,14 @@ nav a {
     background: #111;
     margin: 15px;
     padding: 25px;
-    border-radius: 10px;
-    width: 250px;
+    border-radius: 12px;
+    width: 260px;
     border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.plano:hover {
+    transform: scale(1.05);
 }
 
 .plano h3 {
@@ -105,7 +119,7 @@ nav a {
 }
 
 .plano p {
-    font-size: 24px;
+    font-size: 26px;
 }
 
 /* DEPOIMENTOS */
@@ -120,7 +134,8 @@ nav a {
 
 /* IMAGEM */
 .banner img {
-    width: 400px;
+    width: 420px;
+    border-radius: 10px;
 }
 
 /* WHATSAPP FIXO */
@@ -131,7 +146,14 @@ nav a {
 }
 
 .whatsapp img {
-    width: 65px;
+    width: 70px;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #aaa;
 }
 </style>
 
@@ -159,14 +181,14 @@ nav a {
         </a>
     </div>
 
-    <img src="https://via.placeholder.com/400">
+    <img src="https://images.unsplash.com/photo-1593784991095-a205069470b6">
 </div>
 
 <div class="section">
     <h2>O QUE VOCÊ RECEBE</h2>
     <div class="cards">
         <div class="card">⚙️ Instalação completa</div>
-        <div class="card">📺 Configuração de apps</div>
+        <div class="card">📺 Configuração de aplicativos</div>
         <div class="card">🎧 Suporte rápido</div>
     </div>
 </div>
@@ -192,11 +214,15 @@ nav a {
     <h2>CLIENTES SATISFEITOS</h2>
     <div class="depoimentos">
         <div class="depoimento">⭐⭐⭐⭐⭐ Muito rápido e profissional!</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Funcionou perfeito, recomendo</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Atendimento top demais</div>
-        <div class="depoimento">⭐⭐⭐⭐⭐ Minha TV ficou outra!</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Funcionou perfeito!</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Atendimento excelente!</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Recomendo demais!</div>
     </div>
 </div>
+
+<footer>
+    TVBox Pró - Atendimento rápido via WhatsApp
+</footer>
 
 <!-- BOTÃO WHATSAPP -->
 <a class="whatsapp" href="https://wa.me/5535999003481">
