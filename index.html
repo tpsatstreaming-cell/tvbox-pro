@@ -9,83 +9,129 @@
 body {
     margin: 0;
     font-family: Arial;
-    background: #0f0f0f;
+    background: #000;
     color: white;
 }
 
 /* TOPO */
 header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
     background: black;
-    padding: 20px;
-    text-align: center;
-    border-bottom: 2px solid red;
+    border-bottom: 1px solid #222;
 }
 
-h1 {
+.logo {
     color: red;
-    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.slogan {
-    color: #ccc;
+nav a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
     font-size: 14px;
 }
 
 /* BANNER */
 .banner {
-    padding: 40px;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 60px 20px;
+}
+
+.banner-text h1 {
+    font-size: 40px;
+}
+
+.banner-text span {
+    color: red;
 }
 
 .botao {
     background: red;
     padding: 15px 25px;
+    border-radius: 30px;
     color: white;
     text-decoration: none;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
     margin-top: 20px;
     font-weight: bold;
-    border-radius: 5px;
+}
+
+.botao img {
+    width: 20px;
+    margin-right: 10px;
 }
 
 /* SEÇÕES */
 .section {
-    padding: 30px;
+    padding: 50px 20px;
     text-align: center;
 }
 
+.cards, .planos, .depoimentos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* CARDS */
 .card {
-    background: #1c1c1c;
-    padding: 20px;
+    background: #111;
     margin: 10px;
+    padding: 20px;
     border-radius: 10px;
+    width: 250px;
+}
+
+/* PLANOS */
+.plano {
+    background: #111;
+    margin: 15px;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    border: 1px solid #222;
+}
+
+.plano h3 {
+    color: red;
+}
+
+.plano p {
+    font-size: 24px;
+}
+
+/* DEPOIMENTOS */
+.depoimento {
+    background: #111;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    width: 220px;
+    font-size: 14px;
 }
 
 /* IMAGEM */
-img {
-    max-width: 300px;
-    margin-top: 20px;
-    border-radius: 10px;
+.banner img {
+    width: 400px;
 }
 
-/* BOTÃO FLUTUANTE */
-.whatsapp-fixo {
+/* WHATSAPP FIXO */
+.whatsapp {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: #25d366;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
 }
 
-/* RODAPÉ */
-footer {
-    background: black;
-    text-align: center;
-    padding: 15px;
+.whatsapp img {
+    width: 65px;
 }
 </style>
 
@@ -94,69 +140,68 @@ footer {
 <body>
 
 <header>
-    <h1>TVBox Pró</h1>
-    <p class="slogan">Instalação rápida e sem complicação</p>
+    <div class="logo">TVBox Pró</div>
+    <nav>
+        <a href="#">INÍCIO</a>
+        <a href="#">PLANOS</a>
+        <a href="#">CONTATO</a>
+    </nav>
 </header>
 
 <div class="banner">
-    <h2>Transforme sua TV em uma central completa 📺</h2>
-    <p>Atendimento imediato | Instalação rápida | Suporte garantido</p>
+    <div class="banner-text">
+        <h1>Transforme sua TV em uma <span>central completa!</span></h1>
+        <p>Atendimento imediato | Instalação rápida | Suporte garantido</p>
 
-    <img src="https://via.placeholder.com/300">
-
-    <br>
-    <a class="botao" href="https://wa.me/5535999003481">
-        Falar no WhatsApp
-    </a>
-</div>
-
-<div class="section">
-    <h2>O que você recebe</h2>
-
-    <div class="card">✔ Instalação completa</div>
-    <div class="card">✔ Configuração de aplicativos</div>
-    <div class="card">✔ Suporte rápido</div>
-</div>
-
-<div class="section">
-    <h2>Planos</h2>
-
-    <div class="card">
-        <h3>Básico Mensal</h3>
-        <p>Configuração simples</p>
-        <p><strong>R$ 35</strong></p>
+        <a class="botao" href="https://wa.me/5535999003481">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+            FALAR NO WHATSAPP
+        </a>
     </div>
 
-    <div class="card">
-        <h3>Completo Anual</h3>
-        <p>Configuração + suporte</p>
-        <p><strong>R$ 250</strong></p>
+    <img src="https://via.placeholder.com/400">
+</div>
+
+<div class="section">
+    <h2>O QUE VOCÊ RECEBE</h2>
+    <div class="cards">
+        <div class="card">⚙️ Instalação completa</div>
+        <div class="card">📺 Configuração de apps</div>
+        <div class="card">🎧 Suporte rápido</div>
     </div>
 </div>
 
 <div class="section">
-  <div class="section">
-    <h2>Clientes satisfeitos</h2>
+    <h2>NOSSOS PLANOS</h2>
+    <div class="planos">
+        <div class="plano">
+            <h3>PLANO BÁSICO</h3>
+            <p>R$ 50</p>
+            <a class="botao" href="https://wa.me/5535999003481">Contratar</a>
+        </div>
 
-    <p>⭐⭐⭐⭐⭐ Atendimento rápido, instalou tudo certinho!</p>
-    <p>⭐⭐⭐⭐⭐ Chegou e já deixou funcionando na hora, top demais</p>
-    <p>⭐⭐⭐⭐⭐ Muito educado e resolveu tudo rápido</p>
-    <p>⭐⭐⭐⭐⭐ Valeu a pena, minha TV ficou outra</p>
-    <p>⭐⭐⭐⭐⭐ Funcionando perfeito, recomendo</p>
-    <p>⭐⭐⭐⭐⭐ Melhor serviço que já fiz pra TV</p>
-    <p>⭐⭐⭐⭐⭐ Suporte responde rápido, gostei muito</p>
-    <p>⭐⭐⭐⭐⭐ Instalação rápida mesmo, como prometido</p>
-    <p>⭐⭐⭐⭐⭐ Tudo funcionando liso, sem travar</p>
-    <p>⭐⭐⭐⭐⭐ Recomendo demais, pode confiar</p>
-
+        <div class="plano">
+            <h3>PLANO COMPLETO</h3>
+            <p>R$ 100</p>
+            <a class="botao" href="https://wa.me/5535999003481">Contratar</a>
+        </div>
+    </div>
 </div>
 
-<footer>
-    <p>TVBox Pró - Atendimento rápido via WhatsApp</p>
-</footer>
+<div class="section">
+    <h2>CLIENTES SATISFEITOS</h2>
+    <div class="depoimentos">
+        <div class="depoimento">⭐⭐⭐⭐⭐ Muito rápido e profissional!</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Funcionou perfeito, recomendo</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Atendimento top demais</div>
+        <div class="depoimento">⭐⭐⭐⭐⭐ Minha TV ficou outra!</div>
+    </div>
+</div>
 
-<!-- BOTÃO FLUTUANTE -->
-<a class="whatsapp-fixo" href="https://wa.me/5535999003481">💬</a>
+<!-- BOTÃO WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/5535999003481">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
